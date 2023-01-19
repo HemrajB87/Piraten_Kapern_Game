@@ -29,10 +29,10 @@ Remark: **We are assuming here you are using a _real_ shell (e.g., anything but 
 
 | MVP? | Id  | Feature  | Status  |  Started  | Delivered |
 | :-:  |:-:  |---       | :-:     | :-:       | :-:       |
-| x   | F01 | Roll a dice |  S | 01/01/23 |  |
-| x   | F02 | Roll eight dices  |  B (F01) |   |
-| x   | F03 | Select how many games as command-line arg.  |  P  |   |
-| x   | F04 | end of game with three cranes | P | |
+| x   | F01 | Calculating points of 2 players in one game with re-rolling three dice out of eight each becoming skulls thus ending player round |  S | 01/01/23 |  |
+| x   | F02 | Simulation of 1 game with fixed strategy for both players, strategy being 3 dice are rerolled  |  B (F01) |   |
+| x   | F03 | Simulation of 1 game with fixed strategy for both players, number of dice being rerolled are randomly selected  |  P  |   |
+| x   | F04 | Simulation of 42 games with fixed strategy for both players, number of dice being rerolled are randomly selected | P | |
 | x   | F05 | Player keeping random dice at their turn | B (F02) | | 
 | x   | F06 | Score points: 3-of-a-kind | B (F04) | | 
 | ... | ... | ... |

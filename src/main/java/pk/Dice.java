@@ -1,15 +1,18 @@
 package pk;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Random;
 
 public class Dice {
 
-    public Faces roll() {
+    // roll the dice and return the result as an ArrayList
+    public static ArrayList<String> roll() {
         int howManyFaces = Faces.values().length;
-        System.out.println("  (DEBUG) there are " + howManyFaces + " faces");
-        System.out.println("  (DEBUG) " + Arrays.toString(Faces.values()));
-        Random bag = new Random();
-        return Faces.values()[bag.nextInt(howManyFaces)];
+        ArrayList<String> rollResults = new ArrayList<String>();
+        Random rand = new Random();
+        for (int i = 0; i < 8; i++) {
+            rollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
+        }
+        return rollResults;
     }
-    
 }
+

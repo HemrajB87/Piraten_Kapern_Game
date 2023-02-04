@@ -48,6 +48,40 @@ public class Strategy {
         if (skullCount >= 3) {
             return rollResults;
         }
+        if(playerCard.equals("NOP")){
+            newRollResults.removeAll(Collections.singleton("SABER"));
+            newRollResults.removeAll(Collections.singleton("PARROT"));
+            newRollResults.removeAll(Collections.singleton("MONKEY"));
+
+
+            while (newRollResults.size()<8){
+                newRollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
+            }
+            return newRollResults;
+        }
+
+
+        if(playerCard.equals("MONKEY BUSINESS")){
+            newRollResults.removeAll(Collections.singleton("SABER"));
+            newRollResults.removeAll(Collections.singleton("GOLD"));
+            newRollResults.removeAll(Collections.singleton("DIAMOND"));
+
+            while (newRollResults.size()<8){
+                newRollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
+            }
+            return newRollResults;
+        }
+
+        if(playerCard.equals("SEA BATTLE (2)") ||playerCard.equals("SEA BATTLE (3)")||playerCard.equals("SEA BATTLE (4)") ){
+            newRollResults.removeAll(Collections.singleton("SABER"));
+            newRollResults.removeAll(Collections.singleton("GOLD"));
+            newRollResults.removeAll(Collections.singleton("DIAMOND"));
+
+            while (newRollResults.size()<8){
+                newRollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
+            }
+            return newRollResults;
+        }
 
 
         return rollResults;

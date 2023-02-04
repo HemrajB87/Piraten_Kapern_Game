@@ -41,7 +41,7 @@ public class GameSimulation {
                 System.out.println("Player 1 rolls: " + player1Rolls);
                 //player1Points += Points.calculate(player1Rolls, player1Card);
                 System.out.println("Player 1 Pre-Round Points: "+ player1Points);
-                player1Rolls = Strategy.reroll(player1Rolls);
+                player1Rolls = Strategy.comboReroll(player1Rolls,player1Card); // USING combo reroll (not random)
                 System.out.println("Player 1 re-rolls: " + player1Rolls);
                 System.out.println("Player 2 re-rolls size: " + player1Rolls.size());
                 player1Points += Points.calculate(player1Rolls, player1Card);
@@ -53,7 +53,7 @@ public class GameSimulation {
                 System.out.println("Player 2 rolls: " + player2Rolls);
                 //player1Points += Points.calculate(player1Rolls, player1Card);
                 System.out.println("Player 2 Pre-Round: "+ player2Points);
-                player2Rolls = Strategy.reroll(player2Rolls);
+                player2Rolls = Strategy.comboReroll(player2Rolls,player2Card); // USING combo reroll (not random)
                 System.out.println("Player 2 re-rolls: " + player2Rolls);
                 System.out.println("Player 2 re-rolls size: " + player2Rolls.size());
                 player2Points += Points.calculate(player2Rolls, player2Card);

@@ -1,9 +1,35 @@
 package pk;
 
 import java.util.ArrayList;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class GameSimulation {
 
+
+    private final String[] args;
+
+    //public static final Logger logger = LogManager.getLogger(GameSimulation.class);
+    public GameSimulation(String[] args) {
+        this.args = args;
+    }
+
+
+
+    public boolean checkValidity(){
+        boolean canExecute = false;
+        for(int i=0; i<2; i++){
+            if(args[i].equals("combo")||args[i].equals("random")){
+                canExecute = true;
+            }
+            else {
+                canExecute = false;
+                break;
+            }
+        }
+
+        return canExecute;
+    }
     public static void main(String[] args) {
         double player1wins=0;
         double player2wins=0;
@@ -34,14 +60,14 @@ public class GameSimulation {
                 }
 
 
-
                 ArrayList<String> player1Rolls = Dice.roll();
                 //Points.calculate(player1Rolls,  player1Card);
                 System.out.println("Player 1 card: " + player1Card);
                 System.out.println("Player 1 rolls: " + player1Rolls);
                 //player1Points += Points.calculate(player1Rolls, player1Card);
                 System.out.println("Player 1 Pre-Round Points: "+ player1Points);
-                player1Rolls = Strategy.comboReroll(player1Rolls,player1Card); // USING combo reroll (not random)
+                player1Rolls = Player.Decison(args[0],player1Rolls, player1Card);
+                //player1Rolls = Strategy.comboReroll(player1Rolls,player1Card); // USING combo reroll (not random)
                 System.out.println("Player 1 re-rolls: " + player1Rolls);
                 System.out.println("Player 2 re-rolls size: " + player1Rolls.size());
                 player1Points += Points.calculate(player1Rolls, player1Card);
@@ -53,7 +79,8 @@ public class GameSimulation {
                 System.out.println("Player 2 rolls: " + player2Rolls);
                 //player1Points += Points.calculate(player1Rolls, player1Card);
                 System.out.println("Player 2 Pre-Round: "+ player2Points);
-                player2Rolls = Strategy.comboReroll(player2Rolls,player2Card); // USING combo reroll (not random)
+                player1Rolls = Player.Decison(args[1],player2Rolls, player2Card);
+                //player2Rolls = Strategy.comboReroll(player2Rolls,player2Card); // USING combo reroll (not random)
                 System.out.println("Player 2 re-rolls: " + player2Rolls);
                 System.out.println("Player 2 re-rolls size: " + player2Rolls.size());
                 player2Points += Points.calculate(player2Rolls, player2Card);
@@ -78,6 +105,14 @@ public class GameSimulation {
         System.out.println("Player 2 wins percentage:"+ (((player2wins))/42)*100);
 
 
+    }
+
+    public void simulateGame(){
+        if(checkValidity()){
+            main(args);
+        } else {
+            System.out.println("Refer back to the README file on how to execute code");
+        }
     }
 
 }

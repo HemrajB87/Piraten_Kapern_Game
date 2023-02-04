@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Dice {
 
-    public static final String[] FACES = {"MONKEY", "GOLD", "DIAMOND", "SKULL", "LIONS", "TIGER"};
+    public static final String[] FACES = {"MONKEY", "GOLD", "DIAMOND", "SKULL", "PARROT", "SABER"};
 
     // roll the dice and return the result as an ArrayList
     public static ArrayList<String> roll() {

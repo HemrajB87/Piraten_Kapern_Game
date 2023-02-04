@@ -8,6 +8,7 @@ public class PiratenKarpen {
     public static void main(String[] args) {
         System.out.println("Welcome to Piraten Karpen Simulator!");
         System.out.println("I'm rolling eight dice");
-        GameSimulation.main(args);
+        GameSimulation Simulation = new GameSimulation(args);
+        Simulation.simulateGame();
     }
 }

@@ -33,10 +33,10 @@ Remark: **We are assuming here you are using a _real_ shell (e.g., anything but 
 | x   | F02 | Simulation of 1 game with fixed 8 dice roll,  fixed points , no re-rolling  |  B (F01) |   |
 | x   | F03 | Simulation of 1 games with fixed 8 dice roll, diamond/gold award points, no re-rolling |  P  |   |
 | x   | F04 | Simulation of 1 gamee with random 8 dice roll, diamond/gold points , randomly re-rolling dice except "SKULL" dice | P | |
-| x   | F05 | Simulation of 1 games with random 8 dice roll, diamond/gold and combo's of faces award points , randomly re-rolling dice except "SKULL" dice | B (F02) | 
-| x   | F06 | Simulation of 1 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's | B (F02) |
-| x   | F07 | Simulation of 1 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's, adding 3 cards drawn each turn (NOP, SEA BATTLE, MONKEY BATTLE) | B (F02) |
-| x   | F08 | Simulation of 1 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's, adding 3 cards drawn each turn (NOP, SEA BATTLE, MONKEY BATTLE), cards have functions | B (F02) |
+| x   | F05 | Simulation of 42 games with random 8 dice roll, diamond/gold and combo's of faces award points , randomly re-rolling dice except "SKULL" dice | B (F02) | 
+| x   | F06 | Simulation of 42 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's | B (F02) |
+| x   | F07 | Simulation of 42 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's, adding 3 cards drawn each turn (NOP, SEA BATTLE, MONKEY BATTLE) | B (F02) |
+| x   | F08 | Simulation of 42 games with random 8 dice roll, diamond/gold and combo's of faces award points , re-rolling specific dice except "SKULL" dice to maximize combo's, adding 3 cards drawn each turn (NOP, SEA BATTLE, MONKEY BATTLE), cards have functions | B (F02) |
 
 
 

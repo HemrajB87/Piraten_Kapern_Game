@@ -57,7 +57,7 @@ public class Strategy {
             while (newRollResults.size()<8){
                 newRollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
             }
-            return newRollResults;
+            //return newRollResults;
         }
 
 
@@ -73,18 +73,19 @@ public class Strategy {
         }
 
         if(playerCard.equals("SEA BATTLE (2)") ||playerCard.equals("SEA BATTLE (3)")||playerCard.equals("SEA BATTLE (4)") ){
-            newRollResults.removeAll(Collections.singleton("SABER"));
+            newRollResults.removeAll(Collections.singleton("MONKEY"));
+            newRollResults.removeAll(Collections.singleton("PARROT"));
             newRollResults.removeAll(Collections.singleton("GOLD"));
             newRollResults.removeAll(Collections.singleton("DIAMOND"));
 
             while (newRollResults.size()<8){
                 newRollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
             }
-            return newRollResults;
+            //return newRollResults;
         }
 
 
-        return rollResults;
+        return newRollResults;
     }
 
 

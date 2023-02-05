@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Player {
 
 
-    public static ArrayList<String> Decison(String arg, ArrayList<String> player1Rolls, String player1Card) {
-        if(arg == "random"){
-            return Strategy.reroll(player1Rolls);
+    public static ArrayList<String> Decison(String arg, ArrayList<String> playerRolls, String playerCard) {
+        if(arg.equals("random")){
+            return Strategy.reroll(playerRolls);
         }
-        if(arg == "combo"){
-            return Strategy.comboReroll(player1Rolls,player1Card);
+        if(arg.equals("combo")){
+            return Strategy.comboReroll(playerRolls,playerCard);
         }
 
-        return player1Rolls;
+        return playerRolls;
     }
 }

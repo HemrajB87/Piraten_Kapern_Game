@@ -1,15 +1,15 @@
 package pk;
 
 import java.util.ArrayList;
-import java.util.logging.LogManager;
-import java.util.logging.Logger;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 
 public class GameSimulation {
 
 
     private final String[] args;
 
-    //public static final Logger logger = LogManager.getLogger(GameSimulation.class);
+    public static final Logger logger = LogManager.getLogger(GameSimulation.class);
     public GameSimulation(String[] args) {
         this.args = args;
     }

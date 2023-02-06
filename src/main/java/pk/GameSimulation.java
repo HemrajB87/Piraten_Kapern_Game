@@ -13,7 +13,7 @@ public class GameSimulation {
         this.args = args;
     }
 
-
+    // checking if input is correct
     public boolean checkValidity(){
         boolean Execute = false;
         for(int i=0; i<2; i++){
@@ -27,6 +27,7 @@ public class GameSimulation {
         }
         return Execute;
     }
+    // game logic
     public static void main(String[] args) {
         double player1wins=0;
         double player2wins=0;
@@ -42,16 +43,15 @@ public class GameSimulation {
 
 
             boolean traceFound = false;
+            // if correct word inputted, logging will occur
             if(args[2].equals("trace")||args[2].equals("true")){
                 traceFound = true;
             }
             if(traceFound) {
                 logger.info("GAME " + (i + 1));
             }
-
+            // one game will play until either player has reached 6000 points
             while (player1Points <= 6000 && player2Points <= 6000) {
-                //count++;
-                //System.out.println("Round " + count);
 
                 String player1Card = playerDeck.drawCard();
                 String player2Card = playerDeck.drawCard();
@@ -69,7 +69,7 @@ public class GameSimulation {
                     logger.info("Player 1 Pre-Round Points: " + player1Points);
                     player1Rolls = Player.Decison(args[0], player1Rolls, player1Card);
                     logger.info("Player 1 re-rolls: " + player1Rolls);
-                    logger.info("Player 2 re-rolls size: " + player1Rolls.size());
+                    logger.info("Player 1 re-rolls size: " + player1Rolls.size());
                     player1Points += Points.calculate(player1Rolls, player1Card);
                     logger.info("Player 1 Points: " + player1Points);
                     logger.info("***************************************************" );

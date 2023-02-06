@@ -4,6 +4,7 @@ package pk;
 import java.util.*;
 
 public class Points {
+
     // Method calculates points depending on dice roll and drawn cards
     public static int calculate(ArrayList<String> rolls, String cards) {
         int points = 0;
@@ -80,6 +81,7 @@ public class Points {
         return points;
     }
 
+    // Method calculates points when called upon looking for Diamond/Gold as well as any combos present
     private static int calculatePoints(ArrayList<String> rolls) {
         ArrayList<String> listOccurrences = comboOccurrence(rolls);
         int combo3=Collections.frequency(listOccurrences,"3" );

@@ -11,6 +11,7 @@ public class Dice {
         int howManyFaces = Faces.values().length;
         ArrayList<String> rollResults = new ArrayList<String>();
         Random rand = new Random();
+        // randomly creates an array list containing 8 faces
         for (int i = 0; i < 8; i++) {
             rollResults.add(String.valueOf(Faces.values()[rand.nextInt(howManyFaces)]));
         }

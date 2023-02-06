@@ -36,7 +36,7 @@ public class CardDeck {
 
 
 
-
+    // allows player to draw card from deck
     public String drawCard() {
         Random rand = new Random();
         if (cards.isEmpty()) {

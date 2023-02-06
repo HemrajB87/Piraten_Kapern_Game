@@ -61,7 +61,7 @@ public class GameSimulation {
                     player2Card = playerDeck.drawCard();
 
                 }
-
+                // if user wants logging, the info will be stored in a file
                 if(traceFound) {
                     ArrayList<String> player1Rolls = Dice.roll();
                     logger.info("Player 1 card: " + player1Card);
@@ -72,7 +72,7 @@ public class GameSimulation {
                     logger.info("Player 1 re-rolls size: " + player1Rolls.size());
                     player1Points += Points.calculate(player1Rolls, player1Card);
                     logger.info("Player 1 Points: " + player1Points);
-                    logger.info("***************************************************" );
+
                     ArrayList<String> player2Rolls = Dice.roll();
                     logger.info("Player 2 card: " + player2Card);
                     logger.info("Player 2 rolls: " + player2Rolls);
@@ -82,7 +82,8 @@ public class GameSimulation {
                     logger.info("Player 2 re-rolls size: " + player2Rolls.size());
                     player2Points += Points.calculate(player2Rolls, player2Card);
                     logger.info("Player 2 Points: " + player2Points);
-                } else{
+                    logger.info("***************************************************" );
+                } else{ // else the calculations will be down without any logging and only final result will be given
                     ArrayList<String> player1Rolls = Dice.roll();
                     player1Rolls = Player.Decison(args[0], player1Rolls, player1Card);
                     player1Points += Points.calculate(player1Rolls, player1Card);

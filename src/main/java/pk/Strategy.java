@@ -48,6 +48,7 @@ public class Strategy {
         if (skullCount >= 3) {
             return rollResults;
         }
+        // if card drawn is NOP, remove all cards except Diamond, Gold and Skull and re-roll rest
         if(playerCard.equals("NOP")){
             newRollResults.removeAll(Collections.singleton("SABER"));
             newRollResults.removeAll(Collections.singleton("PARROT"));
@@ -60,7 +61,7 @@ public class Strategy {
             //return newRollResults;
         }
 
-
+        // if card drawn is MONKEY BUSINESS, remove all cards except Parrot, Monkey and Skull and re-roll rest
         if(playerCard.equals("MONKEY BUSINESS")){
             newRollResults.removeAll(Collections.singleton("SABER"));
             newRollResults.removeAll(Collections.singleton("GOLD"));
@@ -71,7 +72,7 @@ public class Strategy {
             }
             //return newRollResults;
         }
-
+        // if card drawn is SEA BATTLE, remove all cards except Saber and Skull and re-roll rest
         if(playerCard.equals("SEA BATTLE (2)") ||playerCard.equals("SEA BATTLE (3)")||playerCard.equals("SEA BATTLE (4)") ){
             newRollResults.removeAll(Collections.singleton("MONKEY"));
             newRollResults.removeAll(Collections.singleton("PARROT"));
@@ -83,7 +84,6 @@ public class Strategy {
             }
             //return newRollResults;
         }
-
 
         return newRollResults;
     }
